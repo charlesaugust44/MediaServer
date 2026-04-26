@@ -70,3 +70,11 @@ services:
     ports:
       - 8080:8080
     restart: unless-stopped
+  scrapper:
+    build: .
+    container_name: scrapper
+    ports:
+      - "9118:9118"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
