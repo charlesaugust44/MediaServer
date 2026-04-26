@@ -1,0 +1,10 @@
+{
+    "radarr": {
+        "download_path": false,
+        "save_path": "/media/downloads"
+    },
+    "tv-sonarr": {
+        "download_path": false,
+        "save_path": "/media/downloads"
+    }
+}

@@ -12,7 +12,8 @@ services:
       - ./config/jellyfin:/config
       - ./media:/media:ro
     ports:
-      - 8096:8096
+      - 8095:80
+      - 8920:443
     restart: unless-stopped
   jackett:
     image: linuxserver/jackett:latest
@@ -67,5 +68,5 @@ services:
       - ./config/qbittorrent:/config
       - ./media:/media
     ports:
-      - 8085:8080
+      - 8080:8080
     restart: unless-stopped
