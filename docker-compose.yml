@@ -12,8 +12,8 @@ services:
       - ./config/jellyfin:/config
       - ./media:/media:ro
     ports:
-      - 8095:80
-      - 8920:443
+      - "80:80"
+      - "443:443"
     restart: unless-stopped
   jackett:
     image: linuxserver/jackett:latest
@@ -25,7 +25,7 @@ services:
     volumes:
       - ./config/jackett:/config
     ports:
-      - 9116:9117
+      - "9117:9117"
     restart: unless-stopped
 
   sonarr:
@@ -39,7 +39,7 @@ services:
       - ./config/sonarr:/config
       - ./media:/media
     ports:
-      - 8986:8989
+      - "8989:8989"
     restart: unless-stopped
 
   radarr:
@@ -53,7 +53,7 @@ services:
       - ./config/radarr:/config
       - ./media:/media
     ports:
-      - 7876:7878
+      - "7878:7878"
     restart: unless-stopped
 
   qbittorrent:
@@ -68,7 +68,7 @@ services:
       - ./config/qbittorrent:/config
       - ./media:/media
     ports:
-      - 8080:8080
+      - "8080:8080"
     restart: unless-stopped
   scrapper:
     build: .
