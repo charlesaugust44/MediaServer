@@ -4,7 +4,6 @@ media
 config/jellyfin/*
 
 !config/jellyfin/data/plugins
-!config/jellyfin/data/root/default/*/*.xml
 
 config/jellyfin/data/data/ScheduledTasks
 
